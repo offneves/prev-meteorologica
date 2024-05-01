@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Previsão Meteorológica</title>
+</head>
+<body>
+    
+    <head></head>
+    
+    <main>
+
+        <!-- Mapa -->
+        <div id="map"></div>
+
+        <!-- Modal principal-->
+        <div id="modal-overlay">
+            <div id="modal-conteudo">
+                <div class="cidade-titulo">
+                    <h2 id="cidade"></h2>
+                    <img src="https://assets.hgbrasil.com/weather/icons/conditions/" alt="Condições do tempo" id="icone-clima">
+                    <img src="https://assets.hgbrasil.com/weather/icons/moon/" alt="Fase da lua" id="icone-lua">
+                </div>
+                <div id="info">
+                    <div id="data"></div>
+                    <span id="desc-clima"></span>
+                    <div id="temp-atual-box">
+                        <span>Temp. Atual: </span><span id="temp-atual"></span>&deg;C
+                    </div>
+                    <div id="temp-max-box">
+                        <span>Temp. Máx.: </span><span id="temp-max"></span>&deg;C
+                    </div>
+                    <div id="temp-min-box">
+                        <span>Temp. Min.: </span><span id="temp-min"></span>&deg;C
+                    </div>
+                    <div id="prob-chuva-box">
+                        <span>Chuva: </span><span id="prob-chuva"></span>%
+                    </div>
+                    <div id="prox-dias">
+                        <button id="prox-dias-btn">Pŕoximos dias</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Modal proximos dias -->
+        <div id="modal-overlay-prox">
+            <div id="modal-conteudo-prox">
+
+                <!-- Dia próx. 1 -->
+                <div id="sessao-prev-prox-1">
+                    <div id="cidade-titulo-prox">
+                        <span id="dia-sem-prox-1"></span>
+                        <img src="https://assets.hgbrasil.com/weather/icons/conditions/" alt="Condições do tempo" id="icone-clima-prox-1">
+                    </div>
+                    <div id="info-prox">
+                        <div id="data-prev-prox-1"></div>
+                        <span id="desc-clima-prox-1"></span>
+                        <div id="temp-prev">
+                            <span>Temp. Máx.: </span><span id="temp-max-prox-1"></span>&deg;C
+                        </div>
+                        <div id="temp-prev">
+                            <span>Temp. Min.: </span><span id="temp-min-prox-1"></span>&deg;C
+                        </div>
+                        <div id="chuva-prev">
+                            <span>Chuva: </span><span id="prob-chuva-prox-1"></span>%
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dia próx. 2 -->
+                <div id="sessao-prev-prox-2">
+                    <div id="cidade-titulo-prox">
+                        <span id="dia-sem-prox-2"></span>
+                        <img src="https://assets.hgbrasil.com/weather/icons/conditions/" alt="Condições do tempo" id="icone-clima-prox-2">
+                    </div>
+                    <div id="info-prox">
+                        <div id="data-prev-prox-2"></div>
+                        <span id="desc-clima-prox-2"></span>
+                        <div id="temp-prev">
+                            <span>Temp. Máx.: </span><span id="temp-max-prox-2"></span>&deg;C
+                        </div>
+                        <div id="temp-prev">
+                            <span>Temp. Min.: </span><span id="temp-min-prox-2"></span>&deg;C
+                        </div>
+                        <div id="chuva-prev">
+                            <span>Chuva: </span><span id="prob-chuva-prox-2"></span>%
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dia próx. 3 -->
+                <div id="sessao-prev-prox-3">
+                    <div id="cidade-titulo-prox">
+                        <span id="dia-sem-prox-3"></span>
+                        <img src="https://assets.hgbrasil.com/weather/icons/conditions/" alt="Condições do tempo" id="icone-clima-prox-3">
+                    </div>
+                    <div id="info-prox">
+                        <div id="data-prev-prox-3"></div>
+                        <span id="desc-clima-prox-3"></span>
+                        <div id="temp-prev">
+                            <span>Temp. Máx.: </span><span id="temp-max-prox-3"></span>&deg;C
+                        </div>
+                        <div id="temp-prev">
+                            <span>Temp. Min.: </span><span id="temp-min-prox-3"></span>&deg;C
+                        </div>
+                        <div id="chuva-prev">
+                            <span>Chuva: </span><span id="prob-chuva-prox-3"></span>%
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>        
+
+    </main>
+    
+
+    <footer>
+
+        <!-- Barra de pesquisa -->
+        <div id="barra-pesquisa">
+            <input type="text" id="cidade-input" placeholder="Digite uma cidade">
+            <button id="consulta-button">Consultar</button>
+            <select id="selecionar-pesquisas">
+                <option disabled selected>Consultas anteriores</option>
+            </select>
+            <button id="limpar-consultas-button">Limpar consultas</button>
+        </div>
+
+    </footer>
+
+
+    <!-- Script -->
+    <script type="module" src="./main.js"></script>
+
+</body>
+</html>
