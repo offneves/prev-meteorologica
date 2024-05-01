@@ -39,7 +39,7 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 <br>
 
 ```
-    git clone <URL do repositório remoto> <diretório de destino>
+    git clone <https://github.com/offneves/prev-meteorologica.git> <diretório de destino>
 ```
 
 <br>
